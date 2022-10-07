@@ -251,7 +251,7 @@
 #
 #
 #
-#
+# # library(SpatialExperiment)
 # # dir <- system.file(
 # #   file.path("extdata", "10xVisium", "section1"),
 # #   package = "SpatialExperiment")

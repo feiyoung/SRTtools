@@ -8,7 +8,7 @@
   spe2seuratList(spe, batch=NULL, verbose=TRUE)
 }
 \arguments{
-  \item{spe}{a SpatialExperiment object or a list consisting of SpatialExperiment objects. If spe is a SpatialExperiment object, it must at least contain the batch(sampel) id in the colData (i.e., sample_id), the raw gene count expression matrix ans sptial coordinates. And the batch must be specified (i.e., batch='sample_id'). If spe is list consisting of SpatialExperiment objects, then each object represents a data batch.}
+  \item{spe}{a SpatialExperiment object or a list consisting of SpatialExperiment objects. If spe is a SpatialExperiment object, it must at least contain the batch(sampel) id in the colData (i.e., sample_id), the raw gene count expression matrix and spatial coordinates. And the batch must be specified (i.e., batch='sample_id'). If spe is a list consisting of multiple SpatialExperiment objects, then each object represents a data batch.}
   \item{batch}{a optional argument, NULL or a string. Only if spe is a list, batch can be NULL. }
   \item{verbose}{an optional logical value, whether output the information.}
 }
@@ -29,6 +29,7 @@
 
 \examples{
 
+  suppressPackageStartupMessages( library(SpatialExperiment))
   dir <- system.file(
     file.path("extdata", "10xVisium", "section1"),
     package = "SpatialExperiment")
